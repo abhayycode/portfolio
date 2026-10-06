@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Abhay Panchal | Software Engineer',
+  icons: {
+    icon: 'icon.png',
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
