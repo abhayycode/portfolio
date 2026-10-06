@@ -45,7 +45,7 @@ export const FloatingNav = () => {
         whileHover={{
           scale: 1.1,
         }}
-        className="absolute custom-shadow left-[50%] translate-x-[-50%] top-[3%] md:top-[2%] lg:top-[3%] xl:top-[5%] bg-black rounded-full h-11 p-1 min-w-fit font-medium cursor-pointer flex items-center gap-1"
+        className="fixed custom-shadow left-[50%] translate-x-[-50%] top-[3%] md:top-[2%] lg:top-[3%] xl:top-[5%] bg-black rounded-full h-11 p-1 min-w-fit font-medium cursor-pointer flex items-center gap-1"
       >
         <FloatingBtnContainer
           handleClick={handleClick}
