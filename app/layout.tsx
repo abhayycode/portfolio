@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 
 const cabinetGrotesk = localFont({
-  src: './fonts/CabinetGrotesk-Variable.ttf',
+  src: './_fonts/CabinetGrotesk-Variable.ttf',
   variable: '--font-cabinet-grotesk',
   weight: '100 900',
   display: 'swap',

@@ -1,7 +1,6 @@
 'use client';
 
 import { GitHubCalendar } from 'react-github-calendar';
-import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 
 export default function GitHubHeatmap() {
@@ -12,12 +11,7 @@ export default function GitHubHeatmap() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }}
-      animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-      transition={{ duration: 0.5, ease: 'easeInOut' }}
-      className="min-h-[160px]"
-    >
+    <div className="min-h-40">
       {mounted && (
         <GitHubCalendar
           username="abhayycode"
@@ -28,6 +22,6 @@ export default function GitHubHeatmap() {
           }}
         />
       )}
-    </motion.div>
+    </div>
   );
 }
