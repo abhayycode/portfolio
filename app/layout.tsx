@@ -3,9 +3,9 @@ import { Geist_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 
-const cabinetGrotesk = localFont({
-  src: './_fonts/CabinetGrotesk-Variable.ttf',
-  variable: '--font-cabinet-grotesk',
+const acorn = localFont({
+  src: './_fonts/acorn-7.ttf',
+  variable: '--acorn',
   weight: '100 900',
   display: 'swap',
 });
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang="en"
-      className={`${cabinetGrotesk.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${acorn.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

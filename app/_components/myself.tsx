@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 
 export default function MySelf() {
   return (
-    <div className="flex flex-col md:text-3xl text-2xl font-medium tracking-tighter">
+    <div className="flex flex-col md:text-3xl text-2xl font-medium">
       <div className="leading-8">
         Hey there — I&apos;m Abhay Panchal{' '}
         <img
