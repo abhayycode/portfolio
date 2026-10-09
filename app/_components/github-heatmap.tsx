@@ -11,17 +11,22 @@ export default function GitHubHeatmap() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className="min-h-40">
-      {mounted && (
-        <GitHubCalendar
-          username="abhayycode"
-          fontSize={14}
-          colorScheme="light"
-          theme={{
-            light: ['#ebedf0', '#c6c6c6', '#8f8f8f', '#4d4d4d', '#111111'],
-          }}
-        />
-      )}
+    <div className="w-full flex flex-col gap-2">
+      <p className="text-2xl">
+        <span className="mark">GitHub Activity</span> (Excludes office activity)
+      </p>
+      <div className="min-h-40">
+        {mounted && (
+          <GitHubCalendar
+            username="abhayycode"
+            fontSize={14}
+            colorScheme="light"
+            theme={{
+              light: ['#ebedf0', '#c6c6c6', '#8f8f8f', '#4d4d4d', '#111111'],
+            }}
+          />
+        )}
+      </div>
     </div>
   );
 }
