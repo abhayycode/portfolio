@@ -13,7 +13,7 @@ export default function GitHubHeatmap() {
   return (
     <div className="w-full flex flex-col gap-2">
       <p className="text-2xl">
-        <span className="mark">GitHub Activity</span> (Excludes office activity)
+        <span className="mark">GitHub Activity</span> (Excludes office activity):
       </p>
       <div className="min-h-40">
         {mounted && (
