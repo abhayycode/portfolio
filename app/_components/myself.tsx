@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 export default function MySelf() {
   return (
     <div className="flex flex-col md:text-3xl text-2xl font-medium gap-5 md:gap-10">
-      <div className="leading-8">Hey there — I&apos;m Abhay Panchal.</div>
+      <div className="leading-8">Hey there — I&apos;m Abhay Panchal. (Availabel for work)</div>
 
       <p>
         A software engineer <span className="mark">(frontend heavy)</span> with{' '}
@@ -53,6 +53,8 @@ export default function MySelf() {
             height={30}
           />
         </a>
+        , also you can mail me through{' '}
+        <a href="mailto:abpanchal951357@gmail.com" className='text-[#808080] underline'>abpanchal951357@gmail.com</a>
       </div>
     </div>
   );

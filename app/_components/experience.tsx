@@ -16,6 +16,8 @@ const experiences = [
 export default function Experience() {
   return (
     <div className="flex flex-col gap-4">
+      <p className="text-2xl mark w-fit">Experiences:</p>
+
       {experiences.map((experience) => (
         <div key={experience.company} className="flex items-center gap-4">
           <div className="flex items-center md:gap-2 max-md:flex-col max-md:items-start">

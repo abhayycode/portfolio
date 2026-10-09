@@ -56,3 +56,46 @@
     transform: scaleX(1);
   }
 }
+
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+.marquee-track {
+  animation: marquee 36s linear infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    mask-image: none;
+    overflow: visible;
+  }
+
+  .marquee-track {
+    animation: none;
+    width: 100%;
+  }
+
+  .marquee-set {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .marquee-set[aria-hidden='true'] {
+    display: none;
+  }
+}
