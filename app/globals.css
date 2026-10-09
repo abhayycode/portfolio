@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -21,4 +21,38 @@
 
 .custom-shadow {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mark {
+  position: relative;
+  isolation: isolate;
+  white-space: nowrap;
+  --mark-height: 0.80em;
+}
+
+.mark::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -0.12em;
+  right: -0.12em;
+  bottom: 0.08em;
+  height: var(--mark-height);
+  background-color: #ffe58a;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: mark-in 650ms cubic-bezier(0.23, 1, 0.32, 1) 450ms both;
+}
+
+@keyframes mark-in {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mark::before {
+    animation: none;
+    transform: scaleX(1);
+  }
 }

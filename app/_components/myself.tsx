@@ -4,22 +4,29 @@ import { motion } from 'motion/react';
 
 export default function MySelf() {
   return (
-    <div className="flex flex-col md:text-3xl text-2xl font-medium">
-      <div className="leading-8">
-        Hey there — I&apos;m Abhay Panchal{' '}
-        <img
-          src="/cat.jpeg"
-          alt="Abhay Panchal"
-          width={50}
-          height={50}
-          className="rounded-full w-12.5 h-12.5 inline-block align-middle mx-1"
-        />
-        , a software engineer (frontend heavy) learning full stack along side.
-        Right now I&apos;m building the features at{' '}
-        <span className="">VectorShift</span>.
-      </div>
+    <div className="flex flex-col md:text-3xl text-2xl font-medium gap-5 md:gap-10">
+      <div className="leading-8">Hey there — I&apos;m Abhay Panchal.</div>
 
-      <div className="mt-10 leading-relaxed">
+      <p>
+        A software engineer <span className="mark">(frontend heavy)</span> with{' '}
+        <span className="mark">2.5+ years</span> building responsive,
+        accessible, and performant web apps used by{' '}
+        <span className="mark">100K+ people.</span>
+      </p>
+
+      <p>
+        Previously at SurveySparrow I cut bundle size by{' '}
+        <span className="mark">43%</span> and page load times by{' '}
+        <span className="mark">50%</span>, owned SAML SSO for public dashboard
+        sharing end to end, and was the sole owner of Analyze codebase.
+      </p>
+
+      <p>
+        Currently at VectorShift I build data-dense dashboards and
+        permission-aware UI for a private-market investment platform.
+      </p>
+
+      <div className="leading-relaxed">
         I post about development on
         <a href="https://www.linkedin.com/in/abhay-panchal1/">
           <motion.img

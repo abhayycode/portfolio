@@ -4,20 +4,22 @@ import { AnimatePresence, motion } from 'motion/react';
 import { usePathname, useRouter } from 'next/navigation';
 
 const FloatingBtnContainer = ({
-  isHome = true,
-  handleClick = () => {},
+  isSelected = true,
+  handleClick = (_: string) => {},
   label = '',
 }) => {
   return (
     <div className="h-full w-fit relative flex items-center">
       <button
-        onClick={handleClick}
-        className={`cursor-pointer w-fit min-w-fit px-2 rounded-full relative z-10 ${isHome ? 'text-black' : 'text-white'}`}
+        onClick={() => {
+          handleClick(label == 'Home' ? '/' : '/components');
+        }}
+        className={`cursor-pointer w-fit min-w-fit px-2 rounded-full relative z-10 ${isSelected ? 'text-black' : 'text-white'}`}
       >
         {label}
       </button>
 
-      {isHome && (
+      {isSelected && (
         <motion.div
           layoutId="home"
           className="w-full h-full bg-white absolute top-0 left-0 rounded-full"
@@ -35,8 +37,8 @@ export const FloatingNav = () => {
   const isHome = pathName == '/';
 
   /* ---------------------- Handlers ---------------------- */
-  function handleClick() {
-    router.push(isHome ? '/components' : '/');
+  function handleClick(redirectUrl: string) {
+    router.push(redirectUrl);
   }
 
   return (
@@ -49,13 +51,13 @@ export const FloatingNav = () => {
       >
         <FloatingBtnContainer
           handleClick={handleClick}
-          isHome={isHome}
+          isSelected={isHome}
           label={'Home'}
         />
         <FloatingBtnContainer
-          isHome={!isHome}
+          isSelected={!isHome}
           handleClick={handleClick}
-          label={'Comps*'}
+          label={'comps'}
         />
       </motion.div>
     </AnimatePresence>
