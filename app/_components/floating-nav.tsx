@@ -9,11 +9,12 @@ const FloatingBtnContainer = ({
   label = '',
 }) => {
   return (
-    <div className="h-full w-fit relative flex items-center">
+    <div
+      className="h-full w-fit relative flex items-center"
+      onClick={() => handleClick(label == 'Home' ? '/' : '/blogs')}
+    >
       <button
-        onClick={() => {
-          handleClick(label == 'Home' ? '/' : '/components');
-        }}
+        onClick={() => {}}
         className={`cursor-pointer w-fit min-w-fit px-2 rounded-full relative z-10 ${isSelected ? 'text-black' : 'text-white'}`}
       >
         {label}
@@ -57,7 +58,7 @@ export const FloatingNav = () => {
         <FloatingBtnContainer
           isSelected={!isHome}
           handleClick={handleClick}
-          label={'comps'}
+          label={'Blogs'}
         />
       </motion.div>
     </AnimatePresence>

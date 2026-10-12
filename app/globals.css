@@ -19,6 +19,12 @@
   }
 }
 
+.code-block pre,
+.code-block code,
+.code-block span {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
 .custom-shadow {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
