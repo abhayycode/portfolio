@@ -12,7 +12,7 @@ export const BlogContainer = ({
   className?: string;
 }) => {
   return (
-    <article className={`${className} flex flex-col gap-5 pb-10`}>{children}</article>
+    <article className={`${className} flex flex-col gap-5 pb-10 overflow-x-hidden`}>{children}</article>
   );
 };
 

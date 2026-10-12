@@ -8,12 +8,12 @@ const highlighter = await createHighlighter({
 });
 
 export const Code = ({ code }: { code: string }) => {
-  const html = highlighter.codeToHtml(code, {
-    lang: 'javascript',
-    theme: 'github-dark',
-  });
+  const html = highlighter
+    .codeToHtml(code, {
+      lang: 'javascript',
+      theme: 'github-dark',
+    })
+    .replace(' tabindex="0"', '');
 
-  return (
-    <div className="code-block" dangerouslySetInnerHTML={{ __html: html }} />
-  );
+  return <div className="code-block" dangerouslySetInnerHTML={{ __html: html }} />;
 };
